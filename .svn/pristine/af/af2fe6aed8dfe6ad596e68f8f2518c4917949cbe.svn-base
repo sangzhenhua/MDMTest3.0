@@ -1,0 +1,69 @@
+package com.pekall.test.mdm;
+
+import gherkin.formatter.Reporter;
+
+
+import java.io.File;
+import java.io.IOException;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import com.pekall.test.mdm.step.UserManager_step;
+import com.pekall.test.mdm.support.service.Login;
+import com.pekall.test.mdm.support.service.MyDriver;
+import com.pekall.test.mdm.support.service.Service;
+import com.pekall.test.mdm.support.service.UserManager;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+
+@RunWith(Cucumber.class)
+//mvn install -Dcucumber.options="--tags @wip --format json:t
+//arget/cucumber-report-myReport.json --format html:target/cucumber-html-report-my
+//Report"
+//@CucumberOptions(tags = { "@wip"}, format = {"html:target/cucumber","json:target/cucumber.json" })
+//@CucumberOptions(tags = { "@wip"}, format = {"html:target/cucumber"})
+
+@Cucumber.Options(tags = { "@wip"},format = {"pretty", "html:target/cucumber-htmlreport","junit:target/cucumber-junit/Webpage.xml"})
+
+public class RunCukesTest {
+	@AfterClass
+	public static void after(){
+		System.out.println("after");
+		Service.getInstance(MyDriver.USE).close();
+		
+	}
+	
+	@BeforeClass
+	public static void beforeAll() throws InterruptedException, IOException {
+		System.out.println("beforeall");
+		File dir = new File("screenshot");
+		if(dir.exists()){	
+			File[] files = dir.listFiles();
+			System.out.println(files);
+			if(files!=null){
+				for(File file:files){
+					file.delete();
+				}
+			}
+		}
+		
+	}
+	
+}

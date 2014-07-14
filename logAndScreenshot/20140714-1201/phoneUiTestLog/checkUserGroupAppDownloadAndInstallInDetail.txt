@@ -1,0 +1,1742 @@
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.pekall.test.mdmui.App
+INSTRUMENTATION_STATUS: stream=
+com.pekall.test.mdmui.App:
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=checkUserGroupAppDownloadAndInstallInDetail
+INSTRUMENTATION_STATUS_CODE: 1
+my Wait for exists
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:0
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1084
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1464
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1802
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:2197
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:2581
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:2950
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:3312
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:3648
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:3948
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:4290
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:4645
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5034
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5388
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5744
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6071
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6427
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6766
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7104
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7440
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7752
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8105
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8480
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8821
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9191
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9528
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9867
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10206
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10544
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10889
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11256
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11596
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11941
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12295
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12619
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12959
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13291
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13685
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14014
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14395
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14720
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15074
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15447
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15785
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:16124
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:16473
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:16751
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:17089
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:17430
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:18406
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+currentMills:20804
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:22244
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:22617
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:23027
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:23364
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:23710
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:24092
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:24450
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:24803
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:25148
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:25518
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:25857
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:26195
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:26532
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:26874
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:27206
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:27512
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:27840
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:28162
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:28519
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:28872
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:29220
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:29632
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:29988
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:30263
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:30615
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:30974
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:31317
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:31667
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:32013
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:32348
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:32671
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:33024
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:33354
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:33670
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:34014
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:34350
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:34709
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:35061
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:35392
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:35717
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:36031
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:36334
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+currentMills:38451
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:40536
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:40920
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:41287
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:41641
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:42015
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:42362
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:42710
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:43048
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:43387
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:43732
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:44092
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:44404
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:44728
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:45086
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:45421
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:45796
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:46152
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:46539
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:46897
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:47233
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:47559
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:47879
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:48247
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:48592
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:48960
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:49288
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:49674
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:50020
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:50390
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:50730
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:51083
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:51400
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:51747
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:52100
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:52388
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:52751
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:53070
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:53393
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:53733
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:54072
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:54400
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+currentMills:55584
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:58840
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:59238
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:59564
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:59932
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:60291
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:60631
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:61023
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:61379
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:61718
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:62043
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:62394
+exists!!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+com.android.uiautomator.core.UiObjectNotFoundException: UiSelector[TEXT=安装, CLASS=android.widget.Button]
+	at com.android.uiautomator.core.UiObject.clickAndWaitForNewWindow(UiObject.java:417)
+	at com.android.uiautomator.core.UiObject.clickAndWaitForNewWindow(UiObject.java:395)
+	at com.pekall.test.mdmui.util.MyUiObject.clickAndWaitForNewWindow(MyUiObject.java:106)
+	at com.pekall.test.mdmui.util.UiAction.findByBtnTextAndClickForNewWindow(UiAction.java:66)
+	at com.pekall.test.mdmui.App.checkUserGroupAppDownloadAndInstallInDetail(App.java:70)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:525)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:115)
+	at junit.framework.TestResult.runProtected(TestResult.java:133)
+	at junit.framework.TestResult.run(TestResult.java:118)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.start(UiAutomatorTestRunner.java:160)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.run(UiAutomatorTestRunner.java:96)
+	at com.android.commands.uiautomator.RunTestCommand.run(RunTestCommand.java:91)
+	at com.android.commands.uiautomator.Launcher.main(Launcher.java:83)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:235)
+	at dalvik.system.NativeStart.main(Native Method)
+my Wait for exists
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:0
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:84
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:164
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:253
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:353
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:467
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:559
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:700
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:800
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:907
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:995
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1095
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1176
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1275
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:1376
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:2027
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:2258
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+currentMills:2522
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:4774
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:4854
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5080
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5186
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5296
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5398
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5522
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5663
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5756
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5833
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:5933
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6013
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6104
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6182
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6284
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6374
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6485
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6576
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6671
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6761
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6871
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:6961
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7042
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7128
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7203
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7275
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7356
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7450
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7538
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7607
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7683
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:7775
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8315
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8467
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8698
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:8965
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9103
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9296
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9420
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:9624
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10342
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10502
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10584
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10652
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10749
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:10947
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11055
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11817
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:11940
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12063
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12206
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12377
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12512
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12604
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12715
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12820
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:12941
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13050
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13142
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13246
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13332
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13471
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13592
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13672
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13830
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:13918
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14002
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14094
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14354
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14550
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14705
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:14968
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15129
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15208
+Not found ANR!
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:15290
+exists!!
+my Wait for exists
+Not found ANR!
+Not found ANR!
+swipe to unlock
+Not found ANR!
+Not found ANR!
+currentMills:0
+exists!!
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.pekall.test.mdmui.App
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=checkUserGroupAppDownloadAndInstallInDetail
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=
+Test results for WatcherResultPrinter=.
+Time: 106.699
+
+OK (1 test)
+
+
+INSTRUMENTATION_STATUS_CODE: -1

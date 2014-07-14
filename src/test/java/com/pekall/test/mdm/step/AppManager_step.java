@@ -1,0 +1,97 @@
+package com.pekall.test.mdm.step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pekall.test.mdm.support.service.AppManager;
+import com.pekall.test.mdm.support.service.CommonAction;
+import com.pekall.test.mdm.support.service.DocManager;
+import com.pekall.test.mdm.support.service.MyDriver;
+import com.pekall.test.mdm.support.service.Service;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.zh_cn.假如;
+import cucumber.api.java.zh_cn.当;
+
+public class AppManager_step {
+	AppManager appManager = AppManager.getInstance();
+	CommonAction commonAction = CommonAction.getInstance();
+	WebDriver driver = Service.getInstance(MyDriver.USE);
+	@当("^添加应用$")
+	public void 添加应用(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map<String,String> map = list.get(0);
+		appManager.gotoAppList();
+		commonAction.gotoAction(By.id("add_apps"), By.xpath("//a[text()='企业Android应用']"));
+	    appManager.addApp(map.get("应用apk路径"),map.get("应用截图路径"), map.get("应用类别"),map.get("应用描述"));
+	}
+	
+
+	@当("^添加应用:应用路径(.*?)应用截图路径(.*?)应用类别(.*?)应用描述(.*?)$")
+	public void 添加应用_应用路径_应用截图路径_应用类别_应用描述(String apkPath, String picPath, String type, String desc) throws Throwable {
+		appManager.gotoAppList();
+		commonAction.gotoAction(By.id("add_apps"), By.xpath("//a[text()='企业Android应用']"));
+	    appManager.addApp(apkPath,picPath, type,desc);
+	}
+	
+	@当("^添加百度应用:应用名称(.*?)安全策略(.*?)分发类别(.*?)分发到(.*?)$")
+	public void 添加百度应用_应用名称_安全策略_分发类别_分发到(String name,String ploy,String distributeType,String distributeTo) throws Throwable {
+	   appManager.gotoAppList();
+	   commonAction.gotoAction(By.id("add_apps"), By.xpath("//a[text()='百度Android应用']"));
+	   appManager.addBaiduApp(name,ploy, distributeType,distributeTo);
+	}
+
+	
+	@当("^选择应用$")
+	public void 选择应用(DataTable table) throws Throwable {
+		List<String> list = table.asList(String.class);
+		appManager.gotoAppList();
+	    commonAction.search(list.get(1));  
+	    commonAction.selectByInfo(list.get(1));
+	    Thread.sleep(1000);
+	   
+	}
+
+	@当("^应用下发到用户$")
+	public void 应用下发到用户(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map map = list.get(0);
+		commonAction.gotoAction(By.xpath("//button[@name='app-apply']"), null);
+		appManager.distributeActionByUser((String)map.get("账号"));
+	}
+
+	@当("^应用下发到设备$")
+	public void 应用下发到设备(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map map = list.get(0);
+		commonAction.gotoAction(By.xpath("//button[@name='app-apply']"), null);
+		appManager.distributeActionByDevice((String)map.get("设备名称"));
+	}
+
+	
+	@当("^取消分发应用$")
+	public void 取消分发应用(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map map = list.get(0);
+		driver.findElement(By.xpath("//a[text()='分发记录']")).click();
+		Thread.sleep(1000);
+		String name = (String)map.get("用户名称");
+		driver.findElement(By.xpath("//td[text()='"+name+"']/parent::tr/td/div/a/i[@data-tooltip-type='error']")).click();
+		Thread.sleep(10000);
+	}
+	
+
+	@当("^删除应用$")
+	public void 删除应用() throws Throwable {
+		driver.findElement(By.xpath("//button[@name='app-delete']")).click();
+		Thread.sleep(2000);
+		driver.switchTo().defaultContent();
+		driver.findElement(By.id("cOk")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("cOk")).click();
+		Thread.sleep(5000);
+	}
+}

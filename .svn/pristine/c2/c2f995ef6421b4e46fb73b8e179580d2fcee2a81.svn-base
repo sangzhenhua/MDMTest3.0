@@ -1,0 +1,44 @@
+package com.pekall.test.mdm.support.service;
+
+import java.io.IOException;
+
+import junit.framework.Assert;
+
+
+
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pekall.test.mdm.support.util.WebInfos;
+
+
+public class Login{
+	private static Login instance;
+	public static Login getInstance() {
+		// TODO Auto-generated method stub
+		if(instance == null)
+		{
+			instance = new Login();
+		}
+		return instance;
+	}
+	
+	
+	
+	public void login() throws InterruptedException, IOException{
+		WebDriver driver = Service.getInstance(MyDriver.USE);
+		driver.get(WebInfos.LoginUrl);
+		driver.findElement(By.id("username")).sendKeys(WebInfos.UserName);
+	    driver.findElement(By.id("password")).sendKeys(WebInfos.Password);
+	    driver.findElement(By.id("login_submit")).click();
+	    Thread.sleep(1000);
+	    
+	    Assert.assertTrue(driver.getPageSource().contains(WebInfos.登陆成功提示));
+	  
+	}
+
+}

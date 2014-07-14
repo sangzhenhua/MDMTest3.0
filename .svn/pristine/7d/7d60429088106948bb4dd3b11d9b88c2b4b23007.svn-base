@@ -1,0 +1,414 @@
+package com.pekall.test.mdm.support.service;
+
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.pekall.test.mdm.support.util.CaptureScreenshot;
+import com.pekall.test.mdm.support.util.WebInfos;
+
+public class CommonAction {
+	private static CommonAction instance;
+	private WebDriver driver = Service.getInstance(MyDriver.USE);
+	
+	public static CommonAction getInstance(){
+		if(instance == null){
+			instance = new CommonAction();
+		}
+		return instance;
+	}
+	
+	public void selectByTotalCheck(String id){
+		WebElement element = driver.findElement(By.id(id));
+		if (!element.isSelected()){
+			element.click();
+		}
+	}
+	
+	public void gotoAction(String actionId,String subActionId,String className,ActionType actionType) throws InterruptedException{
+		driver.findElement(By.id(actionId)).click();
+		Thread.sleep(1000);
+		if(subActionId!=null){
+			driver.findElement(By.id(subActionId)).click();
+		}
+		if(className!=null){
+			driver.findElement(By.className(className)).click();
+		}
+		Thread.sleep(1000);
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(driver.findElement(By.xpath("/html/body/iframe")).getAttribute("id"));
+		switch(actionType){
+		
+		case UserAddSimple:
+			CaptureScreenshot.screenShot("用户单个添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.用户单个添加标题));
+			break;
+		case UserSendMsg:
+			CaptureScreenshot.screenShot("用户发送消息");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.用户发送消息标题));
+			break;
+		case UserDelete:
+			CaptureScreenshot.screenShot("用户删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.用户删除标题));
+			break;
+		case DevicePosition:
+			Thread.sleep(2000);
+			CaptureScreenshot.screenShot("设备定位");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.设备定位标题));
+			break;	
+		case DevicePartClear:
+			CaptureScreenshot.screenShot("设备部分擦除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.设备部分擦除标题));
+			break;	
+		case DeviceLock:
+			CaptureScreenshot.screenShot("设备锁定");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.设备锁定标题));
+			break;
+		case DeviceUnlock:
+			CaptureScreenshot.screenShot("设备解锁");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.设备解锁标题));
+			break;
+		
+		case AndroidPWDConfigAdd:
+			CaptureScreenshot.screenShot("Android密码策略添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android密码策略添加标题));
+			break;	
+		case AndroidPWDConfigUpdate:
+			CaptureScreenshot.screenShot("Android密码策略更新");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android密码策略更新标题));
+			break;	
+		case AndroidPWDConfigIssueGroup:
+			CaptureScreenshot.screenShot("Android密码策略下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;	
+		case AndroidPWDConfigIssueUser:
+			CaptureScreenshot.screenShot("Android密码策略下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;	
+		case AndroidPWDConfigDelete:
+			CaptureScreenshot.screenShot("Android密码策略删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android密码策略删除标题));
+			break;	
+			
+		case AndroidRestrictConfigAdd:
+			CaptureScreenshot.screenShot("Android限制策略添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android限制策略添加标题));
+			break;	
+		case AndroidRestrictConfigUpdate:
+			CaptureScreenshot.screenShot("Android限制策略更新");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android限制策略更新标题));
+			break;	
+		case AndroidRestrictConfigIssueGroup:
+			CaptureScreenshot.screenShot("Android限制策略下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;	
+		case AndroidRestrictConfigIssueUser:
+			CaptureScreenshot.screenShot("Android限制策略下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;	
+		case AndroidRestrictConfigDelete:
+			CaptureScreenshot.screenShot("Android限制策略删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Android限制策略删除标题));
+			break;	
+		case WIFIConfigAdd:
+			CaptureScreenshot.screenShot("WIFI配置添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.WIFI配置添加标题));
+			break;	
+		case WIFIConfigUpdate:
+			CaptureScreenshot.screenShot("WIFI配置更新");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.WIFI配置更新标题));
+			break;	
+		case WIFIConfigIssueGroup:
+			CaptureScreenshot.screenShot("WIFI配置下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;	
+		case WIFIConfigIssueUser:
+			CaptureScreenshot.screenShot("WIFI配置下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;	
+		case WIFIConfigDelete:
+			CaptureScreenshot.screenShot("WIFI配置删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.WIFI配置删除标题));
+			break;
+		case EmailConfigAdd:
+			CaptureScreenshot.screenShot("Email配置添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Email配置添加标题));
+			break;	
+		case EmailConfigUpdate:
+			CaptureScreenshot.screenShot("Email配置更新");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Email配置更新标题));
+			break;	
+		case EmailConfigIssueGroup:
+			CaptureScreenshot.screenShot("Email配置下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;	
+		case EmailConfigIssueUser:
+			CaptureScreenshot.screenShot("Email配置下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;	
+		case EmailConfigDelete:
+			CaptureScreenshot.screenShot("Email配置删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.Email配置删除标题));
+			break;
+			
+		case DocumentAdd:
+			CaptureScreenshot.screenShot("文档添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.文档添加标题));
+			break;
+		case DocumentIssueGroup:
+			CaptureScreenshot.screenShot("文档下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;
+		case DocumentIssueUser:
+			CaptureScreenshot.screenShot("文档下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;
+		case DocumentDelete:
+			CaptureScreenshot.screenShot("文档删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.文档删除标题));
+			break;
+		case ContactsAdd:
+			CaptureScreenshot.screenShot("企业通讯录添加");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录添加标题));
+			break;
+		case ContactsUpdate:
+			CaptureScreenshot.screenShot("企业通讯录更新");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录更新标题));
+			break;
+		case ContactsIssueGroup:
+			CaptureScreenshot.screenShot("企业通讯录下发到分组");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到分组标题));
+			break;
+		case ContactsIssueUser:
+			CaptureScreenshot.screenShot("企业通讯录下发到用户");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.下发到用户标题));
+			break;
+		case ContactsDelete:
+			CaptureScreenshot.screenShot("企业通讯录删除");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录删除标题));
+			break;	
+		}	
+	}
+	
+	public void actionSuccessCheck(ActionType actionType){
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(driver.findElement(By.id("dialog_msg_iframe")));
+		switch(actionType){
+		case UserAddSimple:
+			CaptureScreenshot.screenShot("用户单个添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示)||driver.getPageSource().contains(WebInfos.用户添加重复提示));
+			break;
+		case UserAddBatch:
+			CaptureScreenshot.screenShot("用户批量添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.用户批量添加成功提示)||driver.getPageSource().contains(WebInfos.用户添加重复提示));
+			break;
+		case UserSendMsg:
+			CaptureScreenshot.screenShot("用户发送消息成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case UserDelete:
+			CaptureScreenshot.screenShot("用户删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DevicePosition:
+			break;
+		case DevicePartClear:
+			CaptureScreenshot.screenShot("设备部分擦除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DeviceLock:
+			CaptureScreenshot.screenShot("设备锁定成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DeviceUnlock:
+			CaptureScreenshot.screenShot("设备解锁成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidPWDConfigAdd:
+			CaptureScreenshot.screenShot("Android密码策略添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示)||driver.getPageSource().contains(WebInfos.配置添加重复提示));
+			break;
+		case AndroidPWDConfigUpdate:
+			CaptureScreenshot.screenShot("Android密码策略更新成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidPWDConfigIssueGroup:
+			CaptureScreenshot.screenShot("Android密码策略下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidPWDConfigIssueUser:
+			CaptureScreenshot.screenShot("Android密码策略下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidPWDConfigDelete:
+			CaptureScreenshot.screenShot("Android密码策略删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		
+		case AndroidRestrictConfigAdd:
+			CaptureScreenshot.screenShot("Android限制策略添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示)||driver.getPageSource().contains(WebInfos.配置添加重复提示));
+			break;
+			
+		case AndroidRestrictConfigUpdate:
+			CaptureScreenshot.screenShot("Android限制策略更新成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+			
+		case AndroidRestrictConfigIssueGroup:
+			CaptureScreenshot.screenShot("Android限制策略下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidRestrictConfigIssueUser:
+			CaptureScreenshot.screenShot("Android限制策略下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case AndroidRestrictConfigDelete:
+			CaptureScreenshot.screenShot("Android限制策略删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		
+		case WIFIConfigAdd:
+			CaptureScreenshot.screenShot("WIFI配置添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示)||driver.getPageSource().contains(WebInfos.配置添加重复提示));
+			break;
+		case WIFIConfigUpdate:
+			CaptureScreenshot.screenShot("WIFI配置更新成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case WIFIConfigIssueGroup:
+			CaptureScreenshot.screenShot("WIFI配置下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case WIFIConfigIssueUser:
+			CaptureScreenshot.screenShot("WIFI配置下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case WIFIConfigDelete:
+			CaptureScreenshot.screenShot("WIFI配置删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case EmailConfigAdd:
+			CaptureScreenshot.screenShot("Email配置添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示)||driver.getPageSource().contains(WebInfos.配置添加重复提示));
+			break;
+		case EmailConfigUpdate:
+			CaptureScreenshot.screenShot("Email配置更新成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case EmailConfigIssueGroup:
+			CaptureScreenshot.screenShot("Email配置下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case EmailConfigIssueUser:
+			CaptureScreenshot.screenShot("Email配置下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case EmailConfigDelete:
+			CaptureScreenshot.screenShot("Email配置删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DocumentAdd:
+			CaptureScreenshot.screenShot("文档添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.文档添加成功提示));
+			break;
+		case DocumentIssueGroup:
+			CaptureScreenshot.screenShot("文档下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DocumentIssueUser:
+			CaptureScreenshot.screenShot("文档下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case DocumentDelete:
+			CaptureScreenshot.screenShot("文档删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.文档删除成功提示));
+			break;
+		case ContactsAdd:
+			CaptureScreenshot.screenShot("通讯录添加成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录添加成功提示)||driver.getPageSource().contains(WebInfos.企业通讯录添加重复提示));
+			break;
+		case ContactsUpdate:
+			CaptureScreenshot.screenShot("通讯录更新成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录更新成功提示));
+			break;
+		case ContactsIssueGroup:
+			CaptureScreenshot.screenShot("通讯录下发到分组成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case ContactsIssueUser:
+			CaptureScreenshot.screenShot("通讯录下发到用户成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.操作成功提示));
+			break;
+		case ContactsDelete:
+			CaptureScreenshot.screenShot("通讯录删除成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.企业通讯录删除成功提示));
+			break;
+		case EmailModify:
+			CaptureScreenshot.screenShot("邮件修改成功");
+			Assert.assertTrue(driver.getPageSource().contains(WebInfos.邮件修改成功提示));
+			break;
+		}
+		
+		driver.findElement(By.id("msgOk")).click();	
+	}
+	
+	public void deleteConfirm(String id) throws InterruptedException{
+		driver.findElement(By.id(id)).click();
+		Thread.sleep(1000);
+	}
+	
+	public void relateGroup(String group) throws InterruptedException{
+		driver.findElement(By.xpath("/html/body/div/div/div/div/li/span[@id='tree_1_switch']")).click();		
+		driver.findElement(By.id("tree_2_switch")).click();
+		Thread.sleep(1000);
+		                          
+		driver.findElement(By.xpath("//a/span[2][text()='"+group+"']/parent::a/parent::li/span[@class='button chk checkbox_false_full']")).click();
+		driver.findElement(By.id("confirm")).click();
+		Thread.sleep(2000);
+	}
+	
+	public boolean search(String info,ActionType type) throws InterruptedException{
+		boolean result = true;
+		driver.findElement(By.id("search_input")).sendKeys(info);
+		Thread.sleep(1000);
+		driver.findElement(By.id("search")).click();
+		Thread.sleep(2000);
+		switch(type){
+		case UserSearch:
+			result = !driver.getPageSource().contains(WebInfos.用户未搜索到提示);
+			break;
+		case DeviceSearch:
+			result = !driver.getPageSource().contains(WebInfos.设备未搜索到提示);
+			break;
+		case PloySearch:
+			result = !driver.getPageSource().contains(WebInfos.策略未搜索到提示);
+			break;
+		case ConfigSearch:
+			result = !driver.getPageSource().contains(WebInfos.配置未搜索到提示);
+			break;
+		case DocSearch:
+			result = !driver.getPageSource().contains(WebInfos.文档未搜索到提示);
+			break;
+		case ContactsSearch:
+			result = !driver.getPageSource().contains(WebInfos.通讯录未搜索到提示);
+			break;
+		}
+		//System.out.println(driver.getPageSource());
+		System.out.println(result);
+		return result;
+	}
+		
+	public void relateUser(List<String> list,ActionType type) throws InterruptedException{
+	    boolean result =this.search(list.get(1),type);
+	    System.out.println(result);
+	    if(result){
+	    	this.selectByTotalCheck("all_check");
+	    }
+	    driver.findElement(By.id("confirm")).click();
+	    Thread.sleep(1000);
+	}
+}

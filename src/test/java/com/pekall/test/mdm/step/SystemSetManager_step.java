@@ -1,0 +1,17 @@
+package com.pekall.test.mdm.step;
+
+import java.util.List;
+import java.util.Map;
+import com.pekall.test.mdm.support.service.SystemSetManager;
+import cucumber.api.DataTable;
+import cucumber.api.java.zh_cn.当;
+
+public class SystemSetManager_step {
+	@当("^在系统设置里面配置邮件$")
+	public void 在系统设置里面配置邮件(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map<String,String> map = list.get(0);
+		SystemSetManager.getInstance().gotoEmailConfig();
+		SystemSetManager.getInstance().setEmail(map.get("用户名"), map.get("发送邮件服务器地址"), map.get("邮件服务器端口"), map.get("电子邮件"), map.get("邮件密码"));
+	}
+}

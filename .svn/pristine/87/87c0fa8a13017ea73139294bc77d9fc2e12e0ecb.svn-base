@@ -1,0 +1,139 @@
+package com.pekall.test.mdm.step;
+
+import com.pekall.test.mdm.support.service.ActionType;
+import com.pekall.test.mdm.support.service.CommonAction;
+import com.pekall.test.mdm.support.service.Login;
+
+import cucumber.api.java.zh_cn.假如;
+import cucumber.api.java.zh_cn.那么;
+
+public class common_step {
+	@假如("^登陆MDM服务器$")
+	public void 登陆mdm服务器() throws Throwable {
+		Login login = Login.getInstance();
+		login.login();
+	}
+
+	@那么("^(.*?)成功$")
+	public void _成功(String actionStr) throws Throwable {
+		ActionType type =null;
+		if(actionStr.contains("用户单个添加")){
+			type = ActionType.UserAddSimple;
+		}
+		else if(actionStr.contains("用户批量添加")){
+			type = ActionType.UserAddBatch;
+		}
+		else if(actionStr.contains("用户发送消息")){
+			type = ActionType.UserSendMsg;
+		}
+		else if(actionStr.contains("用户删除")){
+			type = ActionType.UserDelete;
+		}
+		else if(actionStr.contains("设备定位")){
+			type = ActionType.DevicePosition;
+		}
+		else if(actionStr.contains("设备锁定")){
+			type = ActionType.DeviceLock;
+		}
+		else if(actionStr.contains("设备解锁")){
+			type = ActionType.DeviceUnlock;
+		}
+		else if(actionStr.contains("设备部分擦除")){
+			type = ActionType.DevicePartClear;
+		}
+		
+		else if(actionStr.contains("Android密码策略添加")){
+			type = ActionType.AndroidPWDConfigAdd;
+		}
+		else if(actionStr.contains("Android密码策略更新")){
+			type = ActionType.AndroidPWDConfigUpdate;
+		}
+		else if(actionStr.contains("Android密码策略下发到分组")){
+			type = ActionType.AndroidPWDConfigIssueGroup;
+		}
+		else if(actionStr.contains("Android密码策略下发到用户")){
+			type = ActionType.AndroidPWDConfigIssueUser;
+		}
+		else if(actionStr.contains("Android密码策略删除")){
+			type = ActionType.AndroidPWDConfigDelete;
+		}
+		else if(actionStr.contains("Android限制策略添加")){
+			type = ActionType.AndroidRestrictConfigAdd;
+		}
+		else if(actionStr.contains("Android限制策略更新")){
+			type = ActionType.AndroidRestrictConfigUpdate;
+		}
+		else if(actionStr.contains("Android限制策略下发到分组")){
+			type = ActionType.AndroidRestrictConfigIssueGroup;
+		}
+		else if(actionStr.contains("Android限制策略下发到用户")){
+			type = ActionType.AndroidRestrictConfigIssueUser;
+		}
+		else if(actionStr.contains("Android限制策略删除")){
+			type = ActionType.AndroidRestrictConfigDelete;
+		}
+		else if(actionStr.contains("WIFI配置添加")){
+			type = ActionType.WIFIConfigAdd;
+		}
+		else if(actionStr.contains("WIFI配置更新")){
+			type = ActionType.WIFIConfigUpdate;
+		}
+		else if(actionStr.contains("WIFI配置下发到分组")){
+			type = ActionType.WIFIConfigIssueGroup;
+		}
+		else if(actionStr.contains("WIFI配置下发到用户")){
+			type = ActionType.WIFIConfigIssueUser;
+		}
+		else if(actionStr.contains("WIFI配置删除")){
+			type = ActionType.WIFIConfigDelete;
+		}
+		else if(actionStr.contains("Email配置添加")){
+			type = ActionType.EmailConfigAdd;
+		}
+		else if(actionStr.contains("Email配置更新")){
+			type = ActionType.EmailConfigUpdate;
+		}
+		else if(actionStr.contains("Email配置下发到分组")){
+			type = ActionType.EmailConfigIssueGroup;
+		}
+		else if(actionStr.contains("Email配置下发到用户")){
+			type = ActionType.EmailConfigIssueUser;
+		}
+		else if(actionStr.contains("Email配置删除")){
+			type = ActionType.EmailConfigDelete;
+		}
+		else if(actionStr.contains("文档添加")){
+			type = ActionType.DocumentAdd;
+		}
+		else if(actionStr.contains("文档删除")){
+			type = ActionType.DocumentDelete;
+		}
+		else if(actionStr.contains("文档下发到分组")){
+			type = ActionType.DocumentIssueGroup;
+		}
+		else if(actionStr.contains("文档下发到用户")){
+			type = ActionType.DocumentIssueUser;
+		}
+		else if(actionStr.contains("通讯录添加")){
+			type = ActionType.ContactsAdd;
+		}
+		else if(actionStr.contains("通讯录更新")){
+			type = ActionType.ContactsUpdate;
+		}
+		else if(actionStr.contains("通讯录下发到分组")){
+			type = ActionType.ContactsIssueGroup;
+		}
+		else if(actionStr.contains("通讯录下发到用户")){
+			type = ActionType.ContactsIssueUser;
+		}
+		else if(actionStr.contains("通讯录删除")){
+			type = ActionType.ContactsDelete;
+		}
+		else if(actionStr.contains("邮件配置")){
+			type = ActionType.EmailModify;
+		}
+		if(type!=ActionType.DevicePosition){
+			CommonAction.getInstance().actionSuccessCheck(type);
+		}
+	}
+}

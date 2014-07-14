@@ -1,0 +1,59 @@
+package com.pekall.test.mdm.step;
+
+import java.util.List;
+import java.util.Map;
+
+import com.pekall.test.mdm.support.service.ActionType;
+import com.pekall.test.mdm.support.service.CommonAction;
+import com.pekall.test.mdm.support.service.ContactsManager;
+import com.pekall.test.mdm.support.service.DocManager;
+import com.pekall.test.mdm.support.service.PloyManager;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.zh_cn.当;
+import cucumber.api.java.zh_cn.那么;
+
+public class ContactsManager_step {
+	List<String> list =null;
+	@当("^添加企业通讯录$")
+	public void 添加企业通讯录(DataTable table) throws Throwable {
+		List<Map<String, String>> list = table.asMaps(String.class, String.class);
+		Map<String,String> map = list.get(0);
+		ContactsManager.getInstance().gotoContactsList();
+	    CommonAction.getInstance().gotoAction("add_contacts", null,null, ActionType.ContactsAdd);
+	    ContactsManager.getInstance().addContacts(map.get("通讯录名称"),map.get("通讯录路径"));
+	}
+
+	@当("^选择通讯录$")
+	public void 选择通讯录(DataTable table) throws Throwable {
+		list = table.asList(String.class);
+		ContactsManager.getInstance().gotoContactsList();
+	    boolean result =CommonAction.getInstance().search(list.get(1),ActionType.ContactsSearch);
+	    System.out.println(result);
+	    if(result){
+	    	ContactsManager.getInstance().selectContacts(list);
+	    }
+	}
+
+	@当("^通讯录下发到分组$")
+	public void 通讯录下发到分组(DataTable table) throws Throwable {
+		List<String> list = table.asList(String.class);
+		CommonAction.getInstance().gotoAction("rel2group",null, null, ActionType.ContactsIssueGroup);
+		CommonAction.getInstance().relateGroup(list.get(1));
+	}
+
+	@当("^更新通讯录$")
+	public void 更新通讯录(DataTable table) throws Throwable {
+		List<Map<String, String>> listContacts = table.asMaps(String.class, String.class);
+		Map<String,String> map = listContacts.get(0);
+		ContactsManager.getInstance().gotoContactsUpdate(list.get(1));
+		ContactsManager.getInstance().addContacts(null, map.get("通讯录路径"));
+	}
+
+	@当("^删除通讯录$")
+	public void 删除通讯录() throws Throwable {
+		CommonAction.getInstance().gotoAction("delete_contacts",null, null, ActionType.ContactsDelete);
+		CommonAction.getInstance().deleteConfirm("b_ok");
+	}
+
+}

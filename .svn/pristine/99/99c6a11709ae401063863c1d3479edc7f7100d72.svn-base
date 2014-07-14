@@ -1,0 +1,436 @@
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("com/pekall/test/mdm/features/a_用户管理.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: zh-CN"
+    }
+  ],
+  "line": 3,
+  "name": "用户管理",
+  "description": "添加删除用户和给用户发送消息",
+  "id": "用户管理",
+  "keyword": "功能",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@wip"
+    }
+  ]
+});
+formatter.scenario({
+  "line": 14,
+  "name": "单个添加用户",
+  "description": "",
+  "id": "用户管理;单个添加用户;;2",
+  "type": "scenario",
+  "keyword": "场景大纲",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "line": 8,
+  "name": "登陆MDM服务器",
+  "keyword": "假如"
+});
+formatter.step({
+  "line": 9,
+  "name": "添加单个用户:账户名mdmtest@pekall.com姓名自动化测试密码123456确认密码123456电话010-2222222手机12345678910",
+  "matchedColumns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "keyword": "当"
+});
+formatter.step({
+  "line": 10,
+  "name": "用户单个添加成功",
+  "keyword": "那么"
+});
+formatter.match({
+  "location": "common_step.登陆mdm服务器()"
+});
+formatter.result({
+  "duration": 6537169460,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "mdmtest@pekall.com",
+      "offset": 10
+    },
+    {
+      "val": "自动化测试",
+      "offset": 30
+    },
+    {
+      "val": "123456",
+      "offset": 37
+    },
+    {
+      "val": "123456",
+      "offset": 47
+    },
+    {
+      "val": "010-2222222",
+      "offset": 55
+    },
+    {
+      "val": "12345678910",
+      "offset": 68
+    }
+  ],
+  "location": "UserManager_step.添加单个用户_账户名_姓名_密码_确认密码_电话_手机(String,String,String,String,String,String)"
+});
+formatter.result({
+  "duration": 6278624109,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "用户单个添加",
+      "offset": 0
+    }
+  ],
+  "location": "common_step._成功(String)"
+});
+formatter.result({
+  "duration": 371775704,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 15,
+  "name": "单个添加用户",
+  "description": "",
+  "id": "用户管理;单个添加用户;;3",
+  "type": "scenario",
+  "keyword": "场景大纲",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "line": 8,
+  "name": "登陆MDM服务器",
+  "keyword": "假如"
+});
+formatter.step({
+  "line": 9,
+  "name": "添加单个用户:账户名mdmtest2@pekall.com姓名自动测试下发密码123456确认密码123456电话010-2222222手机12345678910",
+  "matchedColumns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "keyword": "当"
+});
+formatter.step({
+  "line": 10,
+  "name": "用户单个添加成功",
+  "keyword": "那么"
+});
+formatter.match({
+  "location": "common_step.登陆mdm服务器()"
+});
+formatter.result({
+  "duration": 1623445863,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "mdmtest2@pekall.com",
+      "offset": 10
+    },
+    {
+      "val": "自动测试下发",
+      "offset": 31
+    },
+    {
+      "val": "123456",
+      "offset": 39
+    },
+    {
+      "val": "123456",
+      "offset": 49
+    },
+    {
+      "val": "010-2222222",
+      "offset": 57
+    },
+    {
+      "val": "12345678910",
+      "offset": 70
+    }
+  ],
+  "location": "UserManager_step.添加单个用户_账户名_姓名_密码_确认密码_电话_手机(String,String,String,String,String,String)"
+});
+formatter.result({
+  "duration": 6140020873,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "用户单个添加",
+      "offset": 0
+    }
+  ],
+  "location": "common_step._成功(String)"
+});
+formatter.result({
+  "duration": 348482789,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "批量添加用户",
+  "description": "",
+  "id": "用户管理;批量添加用户;;2",
+  "type": "scenario",
+  "keyword": "场景大纲",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "line": 18,
+  "name": "登陆MDM服务器",
+  "keyword": "假如"
+});
+formatter.step({
+  "line": 19,
+  "name": "导入文件d:\\mdm_organization_template.xlsx批量添加用户",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "当"
+});
+formatter.step({
+  "line": 20,
+  "name": "用户批量添加成功",
+  "keyword": "那么"
+});
+formatter.match({
+  "location": "common_step.登陆mdm服务器()"
+});
+formatter.result({
+  "duration": 1671817157,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "d:\\mdm_organization_template.xlsx",
+      "offset": 4
+    }
+  ],
+  "location": "UserManager_step.导入文件_批量添加用户(String)"
+});
+formatter.result({
+  "duration": 10096502561,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "用户批量添加",
+      "offset": 0
+    }
+  ],
+  "location": "common_step._成功(String)"
+});
+formatter.result({
+  "duration": 345061781,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "发送消息",
+  "description": "",
+  "id": "用户管理;发送消息",
+  "type": "scenario",
+  "keyword": "场景"
+});
+formatter.step({
+  "line": 27,
+  "name": "登陆MDM服务器",
+  "keyword": "假如"
+});
+formatter.step({
+  "line": 28,
+  "name": "选择用户",
+  "rows": [
+    {
+      "cells": [
+        "姓名"
+      ],
+      "line": 29
+    },
+    {
+      "cells": [
+        "自动化测试"
+      ],
+      "line": 30
+    }
+  ],
+  "keyword": "当"
+});
+formatter.step({
+  "line": 31,
+  "name": "给用户发送消息",
+  "rows": [
+    {
+      "cells": [
+        "消息发送方式",
+        "主题",
+        "消息"
+      ],
+      "line": 32
+    },
+    {
+      "cells": [
+        "email",
+        "消息主题",
+        "消息内容"
+      ],
+      "line": 33
+    }
+  ],
+  "keyword": "而且"
+});
+formatter.step({
+  "line": 34,
+  "name": "用户发送消息成功",
+  "keyword": "那么"
+});
+formatter.match({
+  "location": "common_step.登陆mdm服务器()"
+});
+formatter.result({
+  "duration": 1613258616,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserManager_step.选择用户(DataTable)"
+});
+formatter.result({
+  "duration": 4581247291,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserManager_step.给用户发送消息(DataTable)"
+});
+formatter.result({
+  "duration": 4032999698,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "用户发送消息",
+      "offset": 0
+    }
+  ],
+  "location": "common_step._成功(String)"
+});
+formatter.result({
+  "duration": 376871171,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 37,
+  "name": "删除用户",
+  "description": "",
+  "id": "用户管理;删除用户",
+  "type": "scenario",
+  "keyword": "场景"
+});
+formatter.step({
+  "line": 38,
+  "name": "登陆MDM服务器",
+  "keyword": "假如"
+});
+formatter.step({
+  "line": 39,
+  "name": "选择用户",
+  "rows": [
+    {
+      "cells": [
+        "姓名"
+      ],
+      "line": 40
+    },
+    {
+      "cells": [
+        "自动化测试"
+      ],
+      "line": 41
+    }
+  ],
+  "keyword": "当"
+});
+formatter.step({
+  "line": 42,
+  "name": "删除用户",
+  "keyword": "而且"
+});
+formatter.step({
+  "line": 43,
+  "name": "用户删除成功",
+  "keyword": "那么"
+});
+formatter.match({
+  "location": "common_step.登陆mdm服务器()"
+});
+formatter.result({
+  "duration": 1616717307,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserManager_step.选择用户(DataTable)"
+});
+formatter.result({
+  "duration": 4535563405,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserManager_step.删除用户()"
+});
+formatter.result({
+  "duration": 3577052543,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "用户删除",
+      "offset": 0
+    }
+  ],
+  "location": "common_step._成功(String)"
+});
+formatter.result({
+  "duration": 351607243,
+  "status": "passed"
+});
+});

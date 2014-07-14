@@ -1,0 +1,71 @@
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.pekall.test.mdmui.App
+INSTRUMENTATION_STATUS: stream=
+com.pekall.test.mdmui.App:
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=checkDeviceAppDownloadAndInstall
+INSTRUMENTATION_STATUS_CODE: 1
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+com.android.uiautomator.core.UiObjectNotFoundException: UiSelector[TEXT=仅此一次, CLASS=android.widget.TextView]
+	at com.android.uiautomator.core.UiObject.clickAndWaitForNewWindow(UiObject.java:417)
+	at com.android.uiautomator.core.UiObject.clickAndWaitForNewWindow(UiObject.java:395)
+	at com.pekall.test.mdmui.util.MyUiObject.clickAndWaitForNewWindow(MyUiObject.java:106)
+	at com.pekall.test.mdmui.util.UiAction.findByTextAndClickForNewWindow(UiAction.java:40)
+	at com.pekall.test.mdmui.App.checkDeviceAppDownloadAndInstall(App.java:94)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:525)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:115)
+	at junit.framework.TestResult.runProtected(TestResult.java:133)
+	at junit.framework.TestResult.run(TestResult.java:118)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.start(UiAutomatorTestRunner.java:160)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.run(UiAutomatorTestRunner.java:96)
+	at com.android.commands.uiautomator.RunTestCommand.run(RunTestCommand.java:91)
+	at com.android.commands.uiautomator.Launcher.main(Launcher.java:83)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:235)
+	at dalvik.system.NativeStart.main(Native Method)
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+Not found ANR!
+com.android.uiautomator.core.UiObjectNotFoundException: UiSelector[TEXT=安装, CLASS=android.widget.TextView]
+	at com.android.uiautomator.core.UiObject.click(UiObject.java:377)
+	at com.pekall.test.mdmui.util.MyUiObject.click(MyUiObject.java:94)
+	at com.pekall.test.mdmui.util.UiAction.findByTextAndClick(UiAction.java:35)
+	at com.pekall.test.mdmui.App.checkDeviceAppDownloadAndInstall(App.java:95)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:525)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:115)
+	at junit.framework.TestResult.runProtected(TestResult.java:133)
+	at junit.framework.TestResult.run(TestResult.java:118)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.start(UiAutomatorTestRunner.java:160)
+	at com.android.uiautomator.testrunner.UiAutomatorTestRunner.run(UiAutomatorTestRunner.java:96)
+	at com.android.commands.uiautomator.RunTestCommand.run(RunTestCommand.java:91)
+	at com.android.commands.uiautomator.Launcher.main(Launcher.java:83)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:235)
+	at dalvik.system.NativeStart.main(Native Method)

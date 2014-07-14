@@ -1,0 +1,51 @@
+package com.pekall.test.mdm.step;
+
+import java.util.List;
+
+import com.pekall.test.mdm.support.service.ActionType;
+import com.pekall.test.mdm.support.service.CommonAction;
+import com.pekall.test.mdm.support.service.DeviceManager;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.zh_cn.当;
+import cucumber.api.java.zh_cn.那么;
+
+public class DeviceManager_step {
+
+	@当("^选择设备$")
+	public void 选择设备(DataTable  table) throws Throwable {
+		List<String> list = table.asList(String.class);
+	    DeviceManager.getInstance().gotoDeviceList();
+	    boolean result =CommonAction.getInstance().search(list.get(1), ActionType.DeviceSearch);
+	 //   Thread.sleep(1000);
+	    System.out.println(result);
+	    if(result){
+	    	DeviceManager.getInstance().selectDevice(list);
+	    }
+	}
+	
+	@当("^定位设备$")
+	public void 定位设备() throws Throwable {
+		CommonAction.getInstance().gotoAction("position", null, null, ActionType.DevicePosition);
+	}
+
+	@当("^锁定设备$")
+	public void 锁定设备(DataTable  table) throws Throwable {
+	  List<String> list = table.asList(String.class);
+	  CommonAction.getInstance().gotoAction("more", null, "lock_mobile", ActionType.DeviceLock);
+	  DeviceManager.getInstance().lock(list.get(1));
+	}
+
+	@当("^解锁设备$")
+	public void 解锁设备() throws Throwable {
+		CommonAction.getInstance().gotoAction("more", null, "unlock_mobile", ActionType.DeviceUnlock);
+		DeviceManager.getInstance().unlock();
+	}
+
+	@当("^部分擦除设备$")
+	public void 部分擦除设备() throws Throwable {
+		CommonAction.getInstance().gotoAction("more", null, "device_part_clear", ActionType.DevicePartClear);
+		DeviceManager.getInstance().partClear();
+	}
+
+}

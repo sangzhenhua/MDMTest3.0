@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Cucumber Features</title>
+   
+    <script type="text/javascript" language="javascript">
+	
+	function readFile(filename){  
+    var fso = new ActiveXObject("Scripting.FileSystemObject");  
+    var f = fso.OpenTextFile(filename,1,false,-2);  
+    var s = "";  
+    while (!f.AtEndOfStream)  
+        s += f.ReadLine()+"/n";  
+    f.Close();  
+    return s;  
+	}  
+	
+	</script>
+    
+  </head>
+  <body>
+    <input type="button" value="Read!" onclick="document.getElementById('show').value=readFile('E:\\workspace\\MDMTest\\target\\cucumber\\report.js');"/> 
+    <br>  
+     
+    <textarea id="show" name="show" cols="50" rows="8" >  
+    </textarea>  
+
+  </body>
+</html>

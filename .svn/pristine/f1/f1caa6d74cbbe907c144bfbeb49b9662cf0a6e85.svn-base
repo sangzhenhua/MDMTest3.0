@@ -1,0 +1,86 @@
+package com.pekall.test.mdm.support.service;
+
+import java.util.List;
+import java.util.Map;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.pekall.test.mdm.support.util.CaptureScreenshot;
+import com.pekall.test.mdm.support.util.WebInfos;
+
+
+public class UserManager {
+	private static UserManager instance;
+	private WebDriver driver = Service.getInstance(MyDriver.USE);;
+	
+	public static UserManager getInstance(){
+		if(instance == null){
+			instance = new UserManager();
+		}
+		return instance;
+	}
+	
+	public void gotoAddBatch() throws InterruptedException{
+		this.gotoUseList();
+		CommonAction.getInstance().gotoAction("add_user", null, null,ActionType.UserAddSimple );
+		driver.findElement(By.className("addUser_batch")).click();
+		CaptureScreenshot.screenShot("用户批量添加");
+	}
+	
+	public void addSimple(String user_name,String second_name,String password,String r_password,String phone_number,String cell_number) throws InterruptedException{
+	    driver.findElement(By.className("user_name")).sendKeys(user_name);
+	    driver.findElement(By.className("second_name")).sendKeys(second_name);
+	    driver.findElement(By.className("password")).sendKeys(password);
+	    driver.findElement(By.className("r_password")).sendKeys(r_password);
+	    driver.findElement(By.className("phone_number")).sendKeys(phone_number);
+	    driver.findElement(By.className("cell_number")).sendKeys(cell_number);
+	    if(! (driver.findElement(By.id("treeGroup_1_check")).isSelected())){
+	    	 driver.findElement(By.id("treeGroup_1_check")).click();
+	    }
+
+	    driver.findElement(By.id("user_add_ok")).click();
+	    Thread.sleep(1000);
+	}
+	
+
+	public void addBatch(String path) throws InterruptedException{
+		driver.findElement(By.id("userFile")).sendKeys(path);
+		Thread.sleep(3000);
+		driver.findElement(By.id("user_add_ok")).click();
+		Thread.sleep(3000);
+	}
+	
+	public void gotoUseList() throws InterruptedException{
+		//driver.get(WebInfos.MainUrl);
+		driver.findElement(By.id("user_list")).click();
+		Thread.sleep(1000);
+		driver.switchTo().frame("main_container");
+	}
+	
+	public void sendMsg(String type,String title,String content) throws InterruptedException{
+		if(!driver.findElement(By.id(type)).isSelected()){
+			driver.findElement(By.id(type)).click();
+		}
+		driver.findElement(By.id("input_email")).sendKeys(title);
+		driver.findElement(By.id("input_massage")).sendKeys(content);
+		driver.findElement(By.id("confirm")).click();
+		Thread.sleep(1000);
+	}
+	
+}
