@@ -2,18 +2,24 @@ package com.pekall.test.mdm.support.service;
 
 import java.util.List;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.pekall.test.mdm.support.util.MyAssert;
+import com.pekall.test.mdm.support.util.WaitForElement;
 import com.pekall.test.mdm.support.util.WebInfos;
 
 public class PloyManager {
 	private static PloyManager instance;
 	private WebDriver driver = Service.getInstance(MyDriver.USE);
+	private WaitForElement wait = WaitForElement.getInstance();
 	
 	public static PloyManager getInstance(){
 		if(instance == null){
@@ -25,6 +31,34 @@ public class PloyManager {
 	public void addAndroidPWDPloy(String name,String desc,String level) throws InterruptedException{
 		WebElement element =null;
 		if(name!=null){
+			wait.wait(By.id("name")).sendKeys(name);
+		}
+		if(desc!=null){
+			element = driver.findElement(By.id("description"));
+			element.clear();
+			element.sendKeys(desc);
+		}
+		
+		wait.waitAndClick(By.id("password_page_btn"));
+		wait.waitAndClick(By.xpath("//span[@class='lbl']"));
+		wait.waitAndClick(By.id("save"));
+	}
+	
+	public void addAndroidEmailPloy(String name,String desc,String type,String receiveServer,String receivePort,String sendServer,String sendPort) throws InterruptedException{
+		
+		wait.waitAndClick(By.xpath("//a[text()='高级设置']"));
+		wait.waitAndClick(By.id("email_page_btn"));
+		
+		wait.waitAndClick(By.xpath("//p[text()='配置Email']/parent::td/parent::tr/td/label/span"));
+		wait.waitAndClick(By.xpath("//span[text()='IMAP']"));
+		wait.waitAndClick(By.xpath("//li[text()='POP3']"));
+		wait.wait(By.id("IncomingMailServerHostName")).sendKeys(receiveServer);
+		wait.wait(By.id("IncomingMailServerPortNumber")).sendKeys(receivePort);
+		wait.wait(By.id("OutgoingMailServerHostName")).sendKeys(sendServer);
+		wait.wait(By.id("OutgoingMailServerPortNumber")).sendKeys(sendPort);
+		
+		WebElement element =null;
+		if(name!=null){
 			driver.findElement(By.id("name")).sendKeys(name);
 		}
 		if(desc!=null){
@@ -33,14 +67,9 @@ public class PloyManager {
 			element.sendKeys(desc);
 		}
 		
-		driver.findElement(By.id("password_page_btn")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//span[@class='lbl']")).click();
-		//driver.findElement(By.cssSelector(".btn.btn-success")).click()
-		//driver.findElement(By.cssSelector(".ace.configure_page")).click();
-		driver.manage().window().maximize();
-		driver.findElement(By.id("save")).click();
-		Thread.sleep(3000);
+		
+		wait.waitAndClick(By.xpath("/html/body/div/div[1]/div[2]/button[1]"));
+		
 	}
 	
 	public void addAndroidPWDPloy(String name,String desc,String level,String min_length,String complex_min_num,String max_valid_day,String no_pwd_max_time,String history_num,String max_fail_time ) throws InterruptedException{
@@ -108,32 +137,18 @@ public class PloyManager {
 	
 	
 	public void gotoPloyList() throws InterruptedException{
-		Thread.sleep(1000);
-		driver.findElement(By.id("security")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("security-policy-list")).click();
-		Thread.sleep(2000);
-		driver.switchTo().frame("face-content");
+		wait.waitAndClick(By.id("security"));
+		wait.waitAndClick(By.id("security-policy-list"));
+		wait.waitAndSwitchToFrame("face-content");
 	}
 	
 	public void gotoRuleList() throws InterruptedException{
-		Thread.sleep(1000);
-		driver.findElement(By.id("security")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("security-rule-manage")).click();
-		Thread.sleep(2000);
-		driver.switchTo().frame("face-content");
+		wait.waitAndClick(By.id("security"));
+		wait.waitAndClick(By.id("security-rule-manage"));
+		wait.waitAndSwitchToFrame("face-content");
 	}
 	
-	public void gotoAppConfigList() throws InterruptedException{
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("/html/body/div/div[3]/ul/li[4]/div[@id='ploy_config']")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("/html/body/div/div[3]/ul/li[4]/ul/li[3]/div[@id='config_app']")).click();
-		driver.switchTo().frame("main_container");
-	}
-	
-	
+
 	
 	public void updateAndroidPWDPloy(String name,String desc,String level,String min_length,String complex_min_num,String max_valid_day,String no_pwd_max_time,String history_num,String max_fail_time ) throws InterruptedException{
 		this.addAndroidPWDPloy(name, desc, level, min_length, complex_min_num, max_valid_day, no_pwd_max_time, history_num, max_fail_time);

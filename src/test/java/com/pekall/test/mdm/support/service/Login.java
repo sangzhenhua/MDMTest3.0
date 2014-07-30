@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.pekall.test.mdm.support.util.MyAssert;
+import com.pekall.test.mdm.support.util.WaitForElement;
 import com.pekall.test.mdm.support.util.WebInfos;
 
 
@@ -23,17 +24,14 @@ public class Login{
 	
 	
 	public void login() throws InterruptedException, IOException{
+		WaitForElement wait = WaitForElement.getInstance();
 		WebDriver driver = Service.getInstance(MyDriver.USE);
-		System.out.println("longin driver:"+driver);
 		driver.get(WebInfos.LoginUrl);
-		driver.findElement(By.id("account")).sendKeys(WebInfos.UserName);
-	    driver.findElement(By.id("password")).sendKeys(WebInfos.Password);
-	    driver.findElement(By.id("login")).click();
+		wait.wait(By.id("account")).sendKeys(WebInfos.UserName);
+		wait.wait(By.id("password")).sendKeys(WebInfos.Password);
+		wait.waitAndClick(By.id("login"));
 	    driver.manage().window().maximize();
-	    Thread.sleep(6000);
-	  
-	    MyAssert.assert_True("登陆失败",driver.getPageSource().contains(WebInfos.登陆成功提示));
-	  
+	    wait.wait(WebInfos.登陆成功提示);
 	}
 
 }

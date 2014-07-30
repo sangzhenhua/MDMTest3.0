@@ -3,13 +3,19 @@ package com.pekall.test.mdm.support.util;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+
 public class WebInfos {
 	public static final String ChromeDriverPath = "E:\\browser\\chromedriver.exe";
-	public static final String LoginUrl = "https://demo.everknow.cn/admin";
+	public static final String LoginUrl = "https://demo.everknow.cn";
 	//public static final String LoginUrl = "https://192.168.10.91/";
 	public static final String MainUrl = "http://192.168.10.21/adminportal/index.html?userName=admin";
 	public static final String UserName = "yi.yang@pekall.com";
 	public static final String Password = "pekall1234";
+	public static final long  waitInterval = 200;
+	public static final long  waitTimeout = 20000;
+	   
+	
 	public static final String 登陆成功提示 = "欢迎您";
 	public static final String action成功提示 = "命令已发送！";
 	public static final String user单个添加标题 = "添加用户";
@@ -58,6 +64,7 @@ public class WebInfos {
 	public static final String doc添加成功提示 = "添加文档成功！";
 	public static final String doc已经存在提示 = "文档已经存在";
 	public static final String doc删除标题 = "删除文档";
+	public static final String doc删除时取消分发提示 = "继续操作将取消分发";
 	public static final String doc删除成功提示 = "删除成功";
 	
 	public static final String app添加标题 = "新建应用";
@@ -80,6 +87,6 @@ public class WebInfos {
 	
 	public static final String 下发到分组标题 ="下发到分组";
 	public static final String 下发到用户标题 ="下发到用户";
-	    
+	 
 	
 }

@@ -22,6 +22,12 @@ public class CmdExcute {
 		excute("cmd\\pushJarToPhone.cmd",uitestDir,null);
 	}
 	
+	public static void pushRegisterFileToPhone() throws InterruptedException{
+		System.out.println("push registerFile ");
+		excute("cmd\\pushRegisterFileToPhone.cmd",null,null);
+	}
+	
+	
 	public static void mkMdmdir() throws InterruptedException{
 		excute("cmd\\mkMdmdir.cmd",null,null);
 	}
@@ -33,6 +39,11 @@ public class CmdExcute {
 	public static void buildJar(String uitestDir,String folderPath) throws InterruptedException{
 		excute("cmd\\buildjar.cmd",uitestDir,folderPath);
 	}
+	
+	public static void installApk(String resultPath) throws InterruptedException{
+		excute("cmd\\install.cmd",resultPath,null);
+	}
+	
 	
 	public static void pullScreenshot(String folderPath)throws InterruptedException{
 		excute("cmd\\pullScreenshot.cmd",folderPath,null);
@@ -53,6 +64,7 @@ public class CmdExcute {
 	public static void killDriverProcess()throws InterruptedException, IOException{
 		excute("cmd\\killProcess.cmd","chromedriver.exe",null);
 	}
+
 
 	private static String  getAdbtaskPid() throws IOException, InterruptedException{
 		tasklist(RunCukesTest.phoneUiTestLogPath);

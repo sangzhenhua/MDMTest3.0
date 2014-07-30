@@ -1,7 +1,9 @@
 package com.pekall.test.mdm.support.service;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.pekall.test.mdm.support.util.MyChromeDriver;
 import com.pekall.test.mdm.support.util.WebInfos;
 
@@ -14,7 +16,7 @@ public  class Service {
 				{
 				case CHROME:
 					System.setProperty("webdriver.chrome.driver", WebInfos.ChromeDriverPath);
-					instance = new MyChromeDriver(); break;
+					instance = new ChromeDriver(); break;
 				case FIREFOX: instance = new FirefoxDriver();break;
 				}	
 			}

@@ -13,6 +13,8 @@ import com.pekall.test.mdm.support.service.DocManager;
 import com.pekall.test.mdm.support.service.MyDriver;
 import com.pekall.test.mdm.support.service.Service;
 import com.pekall.test.mdm.support.service.UserManager;
+import com.pekall.test.mdm.support.util.WaitForElement;
+import com.pekall.test.mdm.support.util.WebInfos;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.zh_cn.当;
@@ -22,6 +24,7 @@ public class DocManager_step {
 	CommonAction commonAction = CommonAction.getInstance();
 	AppManager appManager = AppManager.getInstance();
 	WebDriver driver = Service.getInstance(MyDriver.USE);
+	WaitForElement wait = WaitForElement.getInstance();
 	
 	@当("^添加文档:文档名称(.*?)文档标签(.*?)文档路径(.*?)$")
 	public void 添加文档_文档名称_文档标签_文档路径(String name, String tag, String path) throws Throwable {
@@ -36,7 +39,6 @@ public class DocManager_step {
 		docManager.gotoDocList();
 	    commonAction.search(list.get(1));  
 	    commonAction.selectByInfo(list.get(1));
-	    Thread.sleep(1000);
 	}
 
 	@当("^文档下发到分组$")
@@ -69,14 +71,24 @@ public class DocManager_step {
 
 	@当("^删除文档$")
 	public void 删除文档() throws Throwable {
-		driver.findElement(By.xpath("//button[@name='doc-delete']")).click();
-		Thread.sleep(2000);
+		wait.waitAndClick(By.xpath("//button[@name='doc-delete']"));
 		driver.switchTo().defaultContent();
-		driver.findElement(By.id("cOk")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.id("cOk")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.id("cOk"));
+		wait.waitAndClick(By.id("cOk"));
 	}
 
+	@当("^删除所有自动化测试文档$")
+	public void 删除所有自动化测试文档() throws Throwable {
+		docManager.gotoDocList();
+		commonAction.search("自动化测试");  
+		wait.waitAndClick(By.xpath("//span[@class='lbl']"));
+		wait.waitAndClick(By.xpath("//button[@data-id='remove_doc']"));
+		wait.waitAndSwitchToFrame(By.xpath("/html/body/iframe"));
+		wait.waitAndClick(By.id("confirm"));
+		driver.switchTo().defaultContent();
+		if(wait.wait(WebInfos.doc删除时取消分发提示, 3000)){
+			wait.waitAndClick(By.id("cOk"));
+		}
+	}
 
 }

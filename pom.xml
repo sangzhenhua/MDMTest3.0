@@ -22,11 +22,7 @@
  	  <layout>default</layout>
  	</repository>
   </repositories>
-  
-  
 
-
-  
   <dependencies>
     <dependency>
 	  <groupId>info.cukes</groupId>
@@ -69,6 +65,11 @@
       <artifactId>selenium-chrome-driver</artifactId>
       <version>2.40.0</version>
       <scope>test</scope>
+    </dependency>
+      <dependency>
+    	<groupId>commons-net</groupId>
+    	<artifactId>commons-net</artifactId>
+    	<version>3.3</version>
     </dependency>
   </dependencies>
 </project>

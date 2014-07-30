@@ -12,6 +12,7 @@ import com.pekall.test.mdm.support.service.MyDriver;
 import com.pekall.test.mdm.support.service.Service;
 import com.pekall.test.mdm.support.service.UserManager;
 import com.pekall.test.mdm.support.util.MyAssert;
+import com.pekall.test.mdm.support.util.WaitForElement;
 import com.pekall.test.mdm.support.util.WebInfos;
 
 import cucumber.api.DataTable;
@@ -22,12 +23,14 @@ public class UserManager_step {
 	UserManager userManager = UserManager.getInstance();
 	CommonAction commonAction = CommonAction.getInstance();
 	WebDriver driver = Service.getInstance(MyDriver.USE);
+	WaitForElement wait = WaitForElement.getInstance();
 	
 	@当("^添加单个用户:账户名(.*?)姓名(.*?)电话(.*?)$")
 	public void 添加单个用户_账户名_姓名_电话(String account, String name, String phone) throws Throwable {
 		userManager.gotoUserList();
 		commonAction.gotoAction(null,".btn.btn-sm.btn-primary.dropdown-toggle", "add_user",null);
 		userManager.addSimple(account, name,phone);
+		
 	}
 	
 	@当("^导入文件(.*?)批量添加用户$")
@@ -44,7 +47,6 @@ public class UserManager_step {
 		userManager.gotoUserList();
 	    commonAction.search(list.get(1));  
 	    commonAction.selectByInfo(list.get(1));
-	    Thread.sleep(1000);
 	}
 	
 	@当("^注册设备$")
@@ -72,11 +74,9 @@ public class UserManager_step {
 	
 	@当("^去激活用户$")
 	public void 去激活用户() throws Throwable {
-		driver.findElement(By.id("active")).click();
-		Thread.sleep(3000);
+		wait.waitAndClick(By.id("active"));
 		MyAssert.assert_True("不能进入去激活界面",driver.getPageSource().contains(WebInfos.user去激活提示语));
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(3000);
+		wait.waitAndClick(By.id("confirm"));
 	}
 
 	@当("^给用户分发应用$")
@@ -107,33 +107,27 @@ public class UserManager_step {
 	public void 取消给用户分发的应用(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='应用分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='应用分发记录']"));
 		String name = (String)map.get("应用名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 	@当("^取消给用户分发的文档$")
 	public void 取消给用户分发的文档(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='文档分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='文档分发记录']"));
 		String name = (String)map.get("文档名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 	@当("^取消给用户分发的通讯录$")
 	public void 取消给用户分发的通讯录(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='通讯录分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='通讯录分发记录']"));
 		String name = (String)map.get("通讯录名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 	@当("^添加分组$")
@@ -149,12 +143,8 @@ public class UserManager_step {
 	public void 选择用户分组(DataTable table) throws Throwable {
 		List<String> list = table.asList(String.class);
 		userManager.gotoUserGroupList();;
-	    boolean result =commonAction.search(list.get(1), ActionType.UserSearch);
-	    System.out.println(result);
-	    if(result){
-	    	commonAction.selectByInfo(list.get(1));
-	    }
-	    Thread.sleep(1000);
+		commonAction.search(list.get(1));
+	    commonAction.selectByInfo(list.get(1));
 	}
 
 	@当("^给用户分组更改策略$")
@@ -177,10 +167,8 @@ public class UserManager_step {
 	
 	@当("^给用户分组注册设备$")
 	public void 给用户分组注册设备() throws Throwable {
-		commonAction.gotoAction("add_device", null, null, null);
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(3000);
-		
+		commonAction.gotoAction("register", null, null, null);
+		wait.waitAndClick(By.id("confirm"));
 	}
 
 
@@ -188,10 +176,8 @@ public class UserManager_step {
 	public void 搜索用户分组(DataTable table) throws Throwable {
 		List<String> list = table.asList(String.class);
 		userManager.gotoUserGroupList();
-	    boolean result =commonAction.search(list.get(1), ActionType.UserSearch);
-	    driver.manage().window().maximize();
-	    Thread.sleep(1000);
-	   
+		commonAction.search(list.get(1));
+	    
 	}
 
 	@当("^给用户分组分发应用$")
@@ -222,33 +208,27 @@ public class UserManager_step {
 	public void 取消给用户分组分发的应用(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='应用分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='应用分发记录']"));
 		String name = (String)map.get("应用名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 	@当("^取消给用户分组分发的文档$")
 	public void 取消给用户分组分发的文档(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='文档分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='文档分发记录']"));
 		String name = (String)map.get("文档名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 	@当("^取消给用户分组分发的通讯录$")
 	public void 取消给用户分组分发的通讯录(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='通讯录分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='通讯录分发记录']"));
 		String name = (String)map.get("通讯录名称");
-		driver.findElement(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td/a[text()='"+name+"']/parent::td/parent::tr/td/i[@data-tooltip-type='error']"));
 	}
 
 

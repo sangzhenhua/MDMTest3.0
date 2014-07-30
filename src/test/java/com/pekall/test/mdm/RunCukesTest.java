@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -11,8 +12,11 @@ import org.junit.runner.RunWith;
 
 import com.pekall.test.mdm.support.service.MyDriver;
 import com.pekall.test.mdm.support.service.Service;
+import com.pekall.test.mdm.support.util.ClearFolder;
 import com.pekall.test.mdm.support.util.CmdExcute;
+import com.pekall.test.mdm.support.util.FTP;
 import com.pekall.test.mdm.support.util.UiTestInfos;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -50,6 +54,8 @@ public class RunCukesTest {
 		new File(phoneScreenshotPath).mkdirs();
 		new File(phoneUiTestLogPath).mkdirs();
 		new File(phoneSystemLogPath).mkdirs();
+		new File("apk").mkdir();
+		ClearFolder.clear("apk");
 		CmdExcute.buildJar(UiTestInfos.UITestProjectDir,
 				UiTestInfos.MDMTestProjectDir + "\\" + phoneUiTestLogPath);
 		Assert.assertTrue(CmdExcute.analyzeResult("build"));
@@ -57,8 +63,9 @@ public class RunCukesTest {
 		CmdExcute.pushJarToPhone(UiTestInfos.UITestProjectDir);
 		CmdExcute.mkMdmdir();
 		CmdExcute.clearMdmdir();
-	
-//		CmdExcute.run(0, UiTestInfos.Setup模块, UiTestInfos.Setup模块_初始化方法);
+		new FTP().downFile("192.168.10.210","pekall", "pekall", "/storage/MDM_Release/MDM3.0_Internal", "apk", "apk");
+		CmdExcute.run(0, UiTestInfos.Setup模块, UiTestInfos.Setup模块_初始化方法);
+		CmdExcute.installApk(UiTestInfos.MDMTestProjectDir + "\\" + phoneUiTestLogPath);
 	}
 
 	@AfterClass

@@ -3,6 +3,24 @@
 功能: 测试准备
 	添加策略，文档，应用，通讯录
 
+	
+	场景: 删除所有已添加的自动化测试文档
+ 		 假如登陆MDM服务器
+ 	 	当删除所有自动化测试文档
+ 		那么服务器所有自动化测试文档删除成功
+ 
+
+ 	场景: 删除所有已添加的自动化测试通讯录
+ 		 假如登陆MDM服务器
+ 	 	当删除所有自动化测试通讯录
+ 		那么服务器所有自动化测试通讯录删除成功
+ 	
+
+ 	场景: 删除所有已添加的自动化测试应用
+ 		 假如登陆MDM服务器
+ 	 	当删除所有自动化测试应用
+ 		那么服务器所有自动化测试应用删除成功
+
 	场景大纲: 添加Android密码策略
  		 假如登陆MDM服务器
  	 	当添加Android密码策略：策略名称<策略名称>策略描述<策略描述>密码等级<密码等级>
@@ -14,8 +32,7 @@
 			|自动化测试Android密码策略2|自动化测试|数字|
 			|自动化测试Android密码策略3|自动化测试|数字|
 			|自动化测试Android密码策略4|自动化测试|数字|
-			|自动化测试Android密码策略5|自动化测试|数字|
-
+		
 
 	场景大纲: 新建文档
  		假如登陆MDM服务器
@@ -30,7 +47,6 @@
   		|自动化测试ppt|自动化测试文档|D:\\autoTestFile\\ppt.ppt|
   		|自动化测试docx|自动化测试文档|D:\\autoTestFile\\docx.docx|
   		|自动化测试xlsx|自动化测试文档|D:\\autoTestFile\\xlsx.xlsx|
-  		
 
 	场景大纲: 新建企业通讯录
 		假如登陆MDM服务器
@@ -54,7 +70,6 @@
 				|应用路径|应用截图路径|应用类别 |应用描述|
   			|d:\\autoTestFile\\2048.apk|d:\\autoTestFile\\2048.jpg|办公|2048正式版|
   			|d:\\autoTestFile\\墨迹天气.apk|d:\\autoTestFile\\墨迹天气.jpg|办公|墨迹天气正式版|
-  			|d:\\autoTestFile\\记事本.apk|d:\\autoTestFile\\记事本.jpg|办公|记事本正式版|
   			|d:\\autoTestFile\\新华字典.apk|d:\\autoTestFile\\新华字典.jpg|办公|新华字典正式版|
   			|d:\\autoTestFile\\万年历.apk|d:\\autoTestFile\\万年历.jpg|办公|万年历正式版|
   		  |d:\\autoTestFile\\我查查.apk|d:\\autoTestFile\\我查查.jpg|办公|我查查正式版|

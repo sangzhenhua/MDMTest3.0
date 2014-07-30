@@ -6,13 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.pekall.test.mdm.support.util.MyAssert;
+import com.pekall.test.mdm.support.util.WaitForElement;
 import com.pekall.test.mdm.support.util.WebInfos;
 
 
 public class UserManager {
 	private static UserManager instance;
 	private WebDriver driver = Service.getInstance(MyDriver.USE);;
-	
+	private WaitForElement wait = WaitForElement.getInstance();
 	public static UserManager getInstance(){
 		if(instance == null){
 			instance = new UserManager();
@@ -22,85 +23,59 @@ public class UserManager {
 	
 	
 	public void addSimple(String account,String name,String phone) throws InterruptedException{
-	    driver.findElement(By.id("account")).sendKeys(account);
-	    driver.findElement(By.id("name")).sendKeys(name);
-	    driver.findElement(By.id("phone")).sendKeys(phone);
-	   // driver.findElement(By.className("r_password")).sendKeys(r_password);
-	   // driver.findElement(By.className("phone_number")).sendKeys(phone_number);
-	   // driver.findElement(By.className("cell_number")).sendKeys(cell_number);
-	   
-	//	WebElement el=driver.findElement(By.xpath("//a/span[2][text()='自动化测试']/parent::a/parent::li/span[@class='button chk checkbox_false_full']"));
-		//if(!el.isSelected()){
-			//el.click();
-	//	}
-	    driver.findElement(By.id("confirm")).click();
-	    Thread.sleep(5000);
+	    wait.wait(By.id("account")).sendKeys(account);
+	    wait.wait(By.id("name")).sendKeys(name);
+	    wait.wait(By.id("phone")).sendKeys(phone);
+	    wait.waitAndClick(By.id("confirm"));
 	}
 	
 
 	public void addBatch(String path) throws InterruptedException{
-		driver.findElement(By.id("file_select")).sendKeys(path);
-		Thread.sleep(3000);
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(3000);
+		wait.wait(By.id("file_select")).sendKeys(path);
+		wait.waitAndClick(By.id("confirm"));
 	}
 	
 	public void addGroup(String name,String member,String desc)throws InterruptedException{
-		driver.findElement(By.id("name")).sendKeys(name);
-		driver.findElement(By.id("search_content")).sendKeys(member);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//p[@data-account='"+member+"']")).click();
-		driver.findElement(By.id("description")).sendKeys(desc);
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(6000);
+		wait.wait(By.id("name")).sendKeys(name);
+		wait.wait(By.id("search_content")).sendKeys(member);
+		wait.waitAndClick(By.xpath("//p[@data-account='"+member+"']"));
+		wait.wait(By.id("description")).sendKeys(desc);
+		wait.waitAndClick(By.id("confirm"));
 	}
 	
 	public void registDevice() throws InterruptedException{
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(3000);
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame(driver.findElement(By.xpath("/html/body/iframe[2]")).getAttribute("id"));
-		
+		wait.waitAndClick(By.id("confirm"));
+		wait.waitAndSwitchToFrame(By.xpath("/html/body/iframe[2]"));
 	}
 	
 	public void gotoUserList() throws InterruptedException{
-		Thread.sleep(1000);
-		driver.findElement(By.id("user")).click();
-		driver.findElement(By.id("user-list")).click();
-		Thread.sleep(2000);
-		driver.switchTo().frame("face-content");
+		wait.waitAndClick(By.id("user"));
+		wait.waitAndClick(By.id("user-list"));
+		wait.waitAndSwitchToFrame("face-content");
 	}
 	
 	public void gotoUserGroupList()throws InterruptedException{
-		Thread.sleep(1000);
-		driver.findElement(By.id("user")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("user-group-list")).click();
-		Thread.sleep(2000);
-		driver.switchTo().frame("face-content");
+		wait.waitAndClick(By.id("user"));
+		wait.waitAndClick(By.id("user-group-list"));
+		wait.waitAndSwitchToFrame("face-content");
 	}
 	
 	public void changePloy(String ployName) throws InterruptedException{
-		driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[3]/div/button")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//span[text()='"+ployName+"']")).click();
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("/html/body/div/div[2]/div/div/div[3]/div/button"));
+		wait.waitAndClick(By.xpath("//span[text()='"+ployName+"']"));
+		wait.waitAndClick(By.id("confirm"));
 	}
 	
 	public void sendMsg(String message_title,String message_body) throws InterruptedException{
-		driver.findElement(By.id("message_title")).sendKeys(message_title);
-		driver.findElement(By.id("message_body")).sendKeys(message_body);
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(10000);
+		wait.wait(By.id("message_title")).sendKeys(message_title);
+		wait.wait(By.id("message_body")).sendKeys(message_body);
+		wait.waitAndClick(By.id("confirm"));
 	}
 	
 	public void distributeAction(String subject) throws InterruptedException{
-		driver.findElement(By.id("search_content")).sendKeys(subject);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//p[@data-name='"+subject+"']")).click();
-		driver.findElement(By.id("confirm")).click();
-		Thread.sleep(10000);
+		wait.wait(By.id("search_content")).sendKeys(subject);
+		wait.waitAndClick(By.xpath("//p[@data-name='"+subject+"']"));
+		wait.waitAndClick(By.id("confirm"));
 	}
 	
 }

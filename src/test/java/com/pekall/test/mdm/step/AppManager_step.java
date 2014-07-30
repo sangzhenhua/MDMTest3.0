@@ -5,12 +5,15 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.pekall.test.mdm.support.service.AppManager;
 import com.pekall.test.mdm.support.service.CommonAction;
 import com.pekall.test.mdm.support.service.DocManager;
 import com.pekall.test.mdm.support.service.MyDriver;
 import com.pekall.test.mdm.support.service.Service;
+import com.pekall.test.mdm.support.util.WaitForElement;
+import com.pekall.test.mdm.support.util.WebInfos;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.zh_cn.假如;
@@ -20,6 +23,7 @@ public class AppManager_step {
 	AppManager appManager = AppManager.getInstance();
 	CommonAction commonAction = CommonAction.getInstance();
 	WebDriver driver = Service.getInstance(MyDriver.USE);
+	WaitForElement wait = WaitForElement.getInstance();
 	@当("^添加应用$")
 	public void 添加应用(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
@@ -51,8 +55,6 @@ public class AppManager_step {
 		appManager.gotoAppList();
 	    commonAction.search(list.get(1));  
 	    commonAction.selectByInfo(list.get(1));
-	    Thread.sleep(1000);
-	   
 	}
 
 	@当("^应用下发到用户$")
@@ -76,22 +78,39 @@ public class AppManager_step {
 	public void 取消分发应用(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='分发记录']"));
 		String name = (String)map.get("用户名称");
-		driver.findElement(By.xpath("//td[text()='"+name+"']/parent::tr/td/div/a/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td[text()='"+name+"']/parent::tr/td/div/a/i[@data-tooltip-type='error']"));
 	}
 	
 
 	@当("^删除应用$")
 	public void 删除应用() throws Throwable {
-		driver.findElement(By.xpath("//button[@name='app-delete']")).click();
-		Thread.sleep(2000);
+		wait.waitAndClick(By.xpath("//button[@name='app-delete']"));
 		driver.switchTo().defaultContent();
-		driver.findElement(By.id("cOk")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.id("cOk")).click();
-		Thread.sleep(5000);
+		wait.waitAndClick(By.id("cOk"));
+		wait.waitAndClick(By.id("cOk"));
 	}
+	
+	@当("^删除所有自动化测试应用$")
+	public void 删除所有自动化测试应用() throws Throwable {
+		appManager.gotoAppList();;
+		
+		wait.waitAndClick(By.xpath("//a[text()='2048']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']"));
+		WebElement e = driver.findElement(By.xpath("//a[text()='万年历']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']"));
+	
+		driver.findElement(By.xpath("//a[text()='万年历']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']")).click();
+		driver.findElement(By.xpath("//a[text()='新華字典']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']")).click();
+		driver.findElement(By.xpath("//a[text()='墨迹天气']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']")).click();
+		driver.findElement(By.xpath("//a[text()='note']/parent::label/parent::td/parent::tr/td/label/span[@class='lbl']")).click();
+	
+		wait.waitAndClick(By.xpath("//button[@data-id='remove_app']"));
+		wait.waitAndSwitchToFrame(By.xpath("/html/body/iframe"));
+		wait.waitAndClick(By.id("confirm"));
+		driver.switchTo().defaultContent();
+		if(wait.wait(WebInfos.doc删除时取消分发提示, 3000)){
+			wait.waitAndClick(By.id("cOk"));
+		}
+	}
+
 }

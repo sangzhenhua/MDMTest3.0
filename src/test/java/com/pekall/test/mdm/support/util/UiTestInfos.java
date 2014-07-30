@@ -5,19 +5,25 @@ public class UiTestInfos {
 	public static final String UITestProjectDir = "e:\\workspace\\MDMMobileTest3.0";
 	
 	public static final String Setup模块 = "SetUp";
-	public static final String Setup模块_初始化方法 = "setup";
+	public static final String Setup模块_初始化方法 = "uninstallPekall";
 	public static final String Setup模块_登陆pekall方法 = "loginPekall";
 	public static final String Setup模块_返回home界面方法 = "goHome";
 	public static final String Setup模块_启动监视器方法 = "runWatcher";
 	
 	public static final String Msg模块 = "Message";
 	public static final String Msg模块_检查用户消息接收方法 = "checkUserMsgReceived";
+	public static final String Msg模块_检查用户消息删除方法 = "checkUserMsgDelete";
+
 	public static final String Msg模块_检查用户分组消息接收方法 = "checkUserGroupMsgReceived";
-	public static final String Msg模块_检查设备消息接收方法 = "checkDeviceMsgReceived";
+	public static final String Msg模块_检查用户分组消息复制方法 = "checkUserGroupMsgCopy";
+	
+	public static final String Msg模块_检查设备消息通知栏接收并查看详情方法 = "checkDeviceMsgNotificationReceivedAndSeeDetail";
 	public static final String Msg模块_检查设备分组消息接收方法 = "checkDeviceGroupMsgReceived";
 	public static final String Msg模块_检查消息接收方法 = "checkMsgReceived";
 	public static final String Device模块 = "Device";
 	public static final String Device模块_设备锁定方法 = "lock";
+	public static final String Device模块_检查注册设备方法 = "checkRegisterDevice";
+	
 	
 	public static final String Device模块_检查设备锁屏方法 = "checkLockedScreen";
 	public static final String Device模块_检查设备锁定方法 = "checkLocked";
@@ -30,7 +36,7 @@ public class UiTestInfos {
 	public static final String PloyAndConfig模块_检查设备策略更改方法 = "checkDevicePloyChanged";
 	public static final String PloyAndConfig模块_检查设备分组策略更改方法 = "checkDeviceGroupPloyChanged";
 	
-	public static final String PloyAndConfig模块_检查Android密码策略接收方法  = "checkAndroidPWDPloyReceived";
+	public static final String PloyAndConfig模块_检查Android邮箱策略接收并登陆邮箱方法  = "checkAndroidEmailPloyReceivedAndLogin";
 	public static final String PloyAndConfig模块_检查Android密码策略更新方法  = "checkAndroidPWDPloyUpdated";
 	public static final String PloyAndConfig模块_检查Android限制策略接收方法  = "checkAndroidRestrictPloyReceived";
 	public static final String PloyAndConfig模块_检查Android限制策略删除方法  = "checkAndroidRestrictPloyDeleted";
@@ -39,10 +45,10 @@ public class UiTestInfos {
 	public static final String PloyAndConfig模块_检查wifi配置删除方法  = "checkWIFIConfigDeleted";
 	
 	public static final String Doc模块  = "Document";
-	public static final String Doc模块_检查用户文档接收方法  = "checkUserDocReceived";
-	public static final String Doc模块_检查用户分组文档接收方法  = "checkUserGroupDocReceived";
-	public static final String Doc模块_检查设备文档接收方法  = "checkDeviceDocReceived";
-	public static final String Doc模块_检查设备分组文档接收方法  = "checkDeviceGroupDocReceived";
+	public static final String Doc模块_检查用户文档接收并下载打开本地文档查看方法  = "checkUserDocReceivedAndDownloadAndOpenAndCheckInLocalDoc";
+	public static final String Doc模块_检查用户分组文档通知栏接收并下载打开本地文档查看方法  = "checkUserGroupDocNotificationReceivedAndDownloadAndOpenAndCheckInLocalDoc";
+	public static final String Doc模块_检查设备文档接收并下载删除方法  = "checkDeviceDocReceivedAndDownloadAndDelete";
+	public static final String Doc模块_检查设备分组文档接收并搜索方法  = "checkDeviceGroupDocReceivedAndSearch";
 	public static final String Doc模块_检查文档1接收方法  = "checkDoc1Received";
 	public static final String Doc模块_检查文档2接收方法  = "checkDoc2Received";
 	public static final String Doc模块_检查用户文档取消方法  = "checkUserDocCancelled";
@@ -54,12 +60,15 @@ public class UiTestInfos {
 	
 	public static final String Email模块  = "Email";
 	public static final String Email模块_Email配置接收方法  = "checkEmailConfigReceived";
+	public static final String Email模块_Email发送接收查看方法 = "checkEmailSendAndReceiveAndView";
+	public static final String Email模块_Email附件保存查看方法 = "checkEmailAttachmentSaveAndView";
+	public static final String Email模块_删除邮件并进入已删除邮件文件夹查看方法 = "checkEmailDeleteAndViewInDeletedFolder";
 	public static final String Email模块_Email配置更新方法  = "checkEmailConfigUpdated";
 	public static final String Email模块_Email配置删除方法  = "checkEmailConfigDeleted";
 	public static final String Contacts模块 = "Contacts";
-	public static final String Contacts模块_检查用户通讯录接收方法 = "checkUserContactsReceived";
-	public static final String Contacts模块_检查用户分组通讯录接收方法 = "checkUserGroupContactsReceived";
-	public static final String Contacts模块_检查设备通讯录接收方法 = "checkDeviceContactsReceived";
+	public static final String Contacts模块_检查用户通讯录接收并进入详情添加和取消重要联系人方法 = "checkUserContactsReceivedAndInDetailAddAndCancelFavoriteContact";
+	public static final String Contacts模块_检查用户分组通讯录通知栏接收并详情拨打电话查看通话记录方法 = "checkUserGroupContactsNotificationReceivedAndInDetailCallPhoneAndCheckCallHistory";
+	public static final String Contacts模块_检查设备通讯录接收并详情拨打手机查看通话记录方法 = "checkDeviceContactsReceivedAndInDetailCallMobileAndCheckCallHistory";
 	public static final String Contacts模块_检查设备分组通讯录接收方法 = "checkDeviceGroupContactsReceived";
 	public static final String Contacts模块_检查通讯录1接收方法 = "checkContacts1Received";
 	public static final String Contacts模块_检查通讯录2接收方法 = "checkContacts2Received";

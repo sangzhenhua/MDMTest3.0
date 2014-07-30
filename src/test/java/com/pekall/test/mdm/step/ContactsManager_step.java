@@ -12,6 +12,8 @@ import com.pekall.test.mdm.support.service.CommonAction;
 import com.pekall.test.mdm.support.service.ContactsManager;
 import com.pekall.test.mdm.support.service.MyDriver;
 import com.pekall.test.mdm.support.service.Service;
+import com.pekall.test.mdm.support.util.WaitForElement;
+import com.pekall.test.mdm.support.util.WebInfos;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.zh_cn.当;
@@ -22,6 +24,7 @@ public class ContactsManager_step {
 	CommonAction commonAction = CommonAction.getInstance();
 	AppManager appManager = AppManager.getInstance();
 	WebDriver driver = Service.getInstance(MyDriver.USE);
+	WaitForElement wait = WaitForElement.getInstance();
 	@当("^添加企业通讯录$")
 	public void 添加企业通讯录(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
@@ -44,7 +47,6 @@ public class ContactsManager_step {
 		contactsManager.gotoContactsList();
 	    commonAction.search(list.get(1));  
 	    commonAction.selectByInfo(list.get(1));
-	    Thread.sleep(1000);
 	}
 
 	@当("^通讯录下发到分组$")
@@ -74,11 +76,9 @@ public class ContactsManager_step {
 	public void 取消分发通讯录(DataTable table) throws Throwable {
 		List<Map<String, String>> list = table.asMaps(String.class, String.class);
 		Map map = list.get(0);
-		driver.findElement(By.xpath("//a[text()='分发记录']")).click();
-		Thread.sleep(1000);
+		wait.waitAndClick(By.xpath("//a[text()='分发记录']"));
 		String name = (String)map.get("用户分组名称");
-		driver.findElement(By.xpath("//td[text()='"+name+"']/parent::tr/td/div/a/i[@data-tooltip-type='error']")).click();
-		Thread.sleep(10000);
+		wait.waitAndClick(By.xpath("//td[text()='"+name+"']/parent::tr/td/div/a/i[@data-tooltip-type='error']"));
 	}
 
 	
@@ -92,11 +92,24 @@ public class ContactsManager_step {
 
 	@当("^删除通讯录$")
 	public void 删除通讯录() throws Throwable {
-		driver.findElement(By.xpath("//button[@name='contacts-delete']")).click();
-		Thread.sleep(2000);
+		wait.waitAndClick(By.xpath("//button[@name='contacts-delete']"));
 		driver.switchTo().defaultContent();
-		driver.findElement(By.id("cOk")).click();
-		Thread.sleep(5000);
+		wait.waitAndClick(By.id("cOk"));
+	}
+
+
+	@当("^删除所有自动化测试通讯录$")
+	public void 删除所有自动化测试通讯录() throws Throwable {
+		contactsManager.gotoContactsList();
+		commonAction.search("自动化测试");  
+		wait.waitAndClick(By.xpath("//span[@class='lbl']"));
+		wait.waitAndClick(By.xpath("//button[@data-id='remove']"));
+		wait.waitAndSwitchToFrame(By.xpath("/html/body/iframe"));
+		wait.waitAndClick(By.id("confirm"));
+		driver.switchTo().defaultContent();
+		if(wait.wait(WebInfos.doc删除时取消分发提示, 3000)){
+			wait.waitAndClick(By.id("cOk"));
+		}
 	}
 
 }

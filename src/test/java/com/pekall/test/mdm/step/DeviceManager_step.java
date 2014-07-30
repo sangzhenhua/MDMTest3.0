@@ -47,7 +47,9 @@ public class DeviceManager_step {
 	
 	@当("^定位设备$")
 	public void 定位设备() throws Throwable {
-		commonAction.gotoAction("location", null,null, null);
+		driver.findElement(By.id("location")).click();
+		Thread.sleep(10000);
+		
 	}
 	
 	@当("^锁屏$")
@@ -153,7 +155,7 @@ public class DeviceManager_step {
 		Map<String,String> map = list.get(0);
 		deviceManager.gotoDeviceGroupList();
 		driver.findElement(By.id("add_group")).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	    deviceManager.addDeviceGroup((String)map.get("设备类型"),(String)map.get("系统"),(String)map.get("品牌"),(String)map.get("设备分组名称"),(String)map.get("设备分组描述"));
 	}
 	
