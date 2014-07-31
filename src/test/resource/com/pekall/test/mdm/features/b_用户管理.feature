@@ -23,15 +23,15 @@
 			|文件路径|
   		|d:\\autoTestFile\\batch_user_template.xls|
 
-@wip
+
 	 场景: 注册设备
 		 假如登陆MDM服务器
- 		#当选择用户
-  		#|账号|
-  		#|zhenhua.sang@pekall.com|
-	#	而且注册设备
-	#	那么服务器注册设备成功
-  #	那么客户端注册设备成功
+ 		当选择用户
+  		|账号|
+  		|zhenhua.sang@pekall.com|
+		而且注册设备
+		那么服务器注册设备成功
+  	那么客户端注册设备成功
 
 
  	场景: 用户发送消息并删除

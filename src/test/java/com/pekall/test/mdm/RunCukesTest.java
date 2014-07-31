@@ -25,7 +25,7 @@ import cucumber.api.junit.Cucumber;
 // arget/cucumber-report-myReport.json --format
 // html:target/cucumber-html-report-my
 // Report"
-@CucumberOptions(tags = { "@wip" }, format = { "html:target/cucumber" ,"json:target/cucumber-html-reports/cucumber.json","junit:target/cucumber-junit/Webpage.xml"})
+@CucumberOptions(tags = { "~@wip" }, format = { "html:target/cucumber" ,"json:target/cucumber-html-reports/cucumber.json","junit:target/cucumber-junit/Webpage.xml"})
 // @CucumberOptions(tags = { "@wip"}, format = {"html:target/cucumber"})
 // @Cucumber.Options(tags = { "~@wip"},format = {"pretty",
 // "html:target/cucumber-htmlreport","junit:target/cucumber-junit/Webpage.xml"})
